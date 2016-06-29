@@ -1,3 +1,4 @@
+var chat = [];
 respondTo = function(input) {
   
     input = input.toLowerCase();
@@ -6,7 +7,7 @@ respondTo = function(input) {
       return "Hello " + chat.slice(-1).pop().user;
     
     if(input.match('what[^ ]* up') || input.match('sup') || input.match('how are you'))
-      return "this github thing is pretty cool, huh?";
+      return "Nothing, You?";
     
     if(input.match('l(ol)+') || input.match('(ha)+(h|$)') || input.match('lmao')|| input.match('xD'))
       return "what's so funny?";
@@ -18,7 +19,7 @@ respondTo = function(input) {
       return ["alright, see you around", "good teamwork!"];
     
     if(input.match('(dumb|stupid|is that all)'))
-      return ["hey i'm just a proof of concept"];
+      return ["I would not be talk "+ chat.slice(-1).pop().user];
     
     if(input == 'noop')
       return;
